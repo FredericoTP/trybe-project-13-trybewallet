@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { requestExactCurrencie } from '../redux/actions';
 
 class WalletForm extends Component {
   constructor() {
     super();
     this.state = {
       valueInput: '',
-      payment: 'money',
-      tag: 'food',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
       description: '',
       currency: 'USD',
+      id: 0,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange({ target }) {
@@ -20,8 +23,21 @@ class WalletForm extends Component {
     this.setState({ [name]: value });
   }
 
+  handleClick() {
+    const { dispatch } = this.props;
+    const { id, valueInput, method, tag, description, currency } = this.state;
+    dispatch(requestExactCurrencie(
+      { value: valueInput, currency, method, tag, description, id },
+    ));
+    this.setState((prevState) => ({
+      id: prevState.id + 1,
+      valueInput: '',
+      description: '',
+    }));
+  }
+
   render() {
-    const { valueInput, payment, tag, description, currency } = this.state;
+    const { valueInput, method, tag, description, currency } = this.state;
     const { currencies } = this.props;
     return (
       <form>
@@ -56,14 +72,14 @@ class WalletForm extends Component {
           Método de pagamento
           <select
             data-testid="method-input"
-            name="payment"
+            name="method"
             id="payment"
-            value={ payment }
+            value={ method }
             onChange={ this.handleChange }
           >
-            <option value="money">Dinheiro</option>
-            <option value="creditcard">Cartão de crédito</option>
-            <option value="debitcard">Cartão de débito</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão de crédito">Cartão de crédito</option>
+            <option value="Cartão de débito">Cartão de débito</option>
           </select>
         </label>
 
@@ -76,11 +92,11 @@ class WalletForm extends Component {
             value={ tag }
             onChange={ this.handleChange }
           >
-            <option value="food">Alimentação</option>
-            <option value="leisure">Lazer</option>
-            <option value="work">Trabalho</option>
-            <option value="transport">Transporte</option>
-            <option value="health">Saúde</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Saúde">Saúde</option>
           </select>
         </label>
 
@@ -95,6 +111,13 @@ class WalletForm extends Component {
             onChange={ this.handleChange }
           />
         </label>
+
+        <button
+          type="button"
+          onClick={ this.handleClick }
+        >
+          Adicionar despesa
+        </button>
       </form>
     );
   }
@@ -104,6 +127,7 @@ WalletForm.propTypes = {
   currencies: PropTypes.arrayOf(
     PropTypes.string,
   ).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

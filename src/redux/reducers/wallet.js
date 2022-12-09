@@ -1,5 +1,8 @@
 import {
-  RECEIVE_CURRENCIES, REQUEST_CURRENCIES_STARTED, FAILED_REQUEST_CURRENCIES,
+  RECEIVE_CURRENCIES,
+  REQUEST_CURRENCIES_STARTED,
+  FAILED_REQUEST_CURRENCIES,
+  ADD_EXPENSES,
 } from '../actions';
 
 const INITIAL_STATE = {
@@ -9,6 +12,7 @@ const INITIAL_STATE = {
   idToEdit: 0,
   isLoading: false,
   error: '',
+  totalValue: 0,
 };
 
 const wallet = (state = INITIAL_STATE, action) => {
@@ -29,6 +33,14 @@ const wallet = (state = INITIAL_STATE, action) => {
       ...state,
       isLoading: false,
       error: action.payload,
+    };
+  case ADD_EXPENSES:
+    return {
+      ...state,
+      expenses: [...state.expenses, action.payload],
+      totalValue: +(
+        state.totalValue + (+action.value * +action.exchange)
+      ).toFixed(2),
     };
   default:
     return state;
