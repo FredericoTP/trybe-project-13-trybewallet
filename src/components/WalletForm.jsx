@@ -129,6 +129,7 @@ class WalletForm extends Component {
           <button
             type="button"
             onClick={ this.handleClick }
+            disabled={ !(/^[0-9]*$/).test(valueInput) }
           >
             Adicionar despesa
           </button>
