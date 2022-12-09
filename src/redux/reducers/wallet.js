@@ -3,6 +3,7 @@ import {
   REQUEST_CURRENCIES_STARTED,
   FAILED_REQUEST_CURRENCIES,
   ADD_EXPENSES,
+  DELETE_ITEM,
 } from '../actions';
 
 const INITIAL_STATE = {
@@ -40,6 +41,14 @@ const wallet = (state = INITIAL_STATE, action) => {
       expenses: [...state.expenses, action.payload],
       totalValue: +(
         state.totalValue + (+action.value * +action.exchange)
+      ).toFixed(2),
+    };
+  case DELETE_ITEM:
+    return {
+      ...state,
+      expenses: [...action.payload],
+      totalValue: +(
+        state.totalValue - action.decrease
       ).toFixed(2),
     };
   default:

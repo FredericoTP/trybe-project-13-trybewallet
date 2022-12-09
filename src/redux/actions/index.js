@@ -3,6 +3,7 @@ export const RECEIVE_CURRENCIES = 'RECEIVE_CURRENCIES';
 export const REQUEST_CURRENCIES_STARTED = 'REQUEST_CURRENCIES_STARTED';
 export const FAILED_REQUEST_CURRENCIES = 'FAILED_REQUEST_CURRENCIES';
 export const ADD_EXPENSES = 'ADD_EXPENSES';
+export const DELETE_ITEM = 'DELETE_ITEM';
 
 export const addEmail = (email) => ({
   type: ADD_EMAIL,
@@ -59,3 +60,9 @@ export function requestExactCurrencie(expenses) {
     }
   };
 }
+
+export const deleteItem = (expenses, decrease) => ({
+  type: DELETE_ITEM,
+  payload: expenses,
+  decrease,
+});
