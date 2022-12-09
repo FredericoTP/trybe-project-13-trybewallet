@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { deleteItem } from '../redux/actions';
+import { deleteItem, editItem } from '../redux/actions';
 
 class Table extends Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleClick(id) {
@@ -22,6 +23,11 @@ class Table extends Component {
       }
     });
     dispatch(deleteItem(array, decrease));
+  }
+
+  handleEdit(id) {
+    const { dispatch } = this.props;
+    dispatch(editItem(id));
   }
 
   render() {
@@ -60,6 +66,13 @@ class Table extends Component {
                   <td>Real</td>
                   <td>
                     <div>
+                      <button
+                        type="button"
+                        data-testid="edit-btn"
+                        onClick={ () => this.handleEdit(id) }
+                      >
+                        Editar
+                      </button>
                       <button
                         type="button"
                         data-testid="delete-btn"
