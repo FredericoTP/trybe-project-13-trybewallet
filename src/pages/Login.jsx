@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addEmail } from '../redux/actions';
+import '../style/Login.css';
 
 const NUMBER_SIX = 6;
 
@@ -40,8 +41,7 @@ class Login extends React.Component {
     const { email, password } = this.state;
     return (
       <div>
-        <label htmlFor="input-email">
-          Email
+        <div>
           <input
             data-testid="email-input"
             id="input-email"
@@ -50,7 +50,10 @@ class Login extends React.Component {
             value={ email }
             onChange={ this.handleChange }
           />
-        </label>
+          <label htmlFor="input-email">
+            Email
+          </label>
+        </div>
         <label htmlFor="input-password">
           Password
           <input
