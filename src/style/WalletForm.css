@@ -1,0 +1,42 @@
+.container-walletform {
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  font-family: Poppins, sans-serif;
+  margin: auto;
+  padding: 20px;
+  width: 95%;
+}
+
+.walletform {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.walletform-value {
+  min-width: 100px;
+  width: 10%;
+}
+
+.walletform-divs {
+  margin: 5px 10px;
+}
+
+.walletform-labels {
+  color: white;
+  font-weight: 800;
+}
+
+.btn-walletform {
+  font-weight: 800;
+}
+
+.btn-walletform:disabled {
+  background-color: #ccc;
+  border: 1px solid #999;
+  color: #666;
+  font-weight: 800;
+}
