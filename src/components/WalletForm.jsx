@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { requestExactCurrencie, clickEditItem } from '../redux/actions';
+import '../style/WalletForm.css';
 
 class WalletForm extends Component {
   constructor() {
