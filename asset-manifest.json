@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5025ad66.css",
-    "main.js": "/static/js/main.6b1b111f.js",
-    "static/media/coins.png": "/static/media/coins.d1ca7f160c61f618d214.png",
-    "static/media/wallet.png": "/static/media/wallet.9eaf56014d6c596a3ecd.png",
-    "index.html": "/index.html",
-    "main.5025ad66.css.map": "/static/css/main.5025ad66.css.map",
-    "main.6b1b111f.js.map": "/static/js/main.6b1b111f.js.map"
+    "main.css": "/trybe-project-13-trybewallet/static/css/main.097ab376.css",
+    "main.js": "/trybe-project-13-trybewallet/static/js/main.afe976ef.js",
+    "static/media/coins.png": "/trybe-project-13-trybewallet/static/media/coins.d1ca7f160c61f618d214.png",
+    "static/media/wallet.png": "/trybe-project-13-trybewallet/static/media/wallet.9eaf56014d6c596a3ecd.png",
+    "index.html": "/trybe-project-13-trybewallet/index.html",
+    "main.097ab376.css.map": "/trybe-project-13-trybewallet/static/css/main.097ab376.css.map",
+    "main.afe976ef.js.map": "/trybe-project-13-trybewallet/static/js/main.afe976ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.5025ad66.css",
-    "static/js/main.6b1b111f.js"
+    "static/css/main.097ab376.css",
+    "static/js/main.afe976ef.js"
   ]
 }
