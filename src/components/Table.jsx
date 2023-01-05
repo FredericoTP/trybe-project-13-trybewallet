@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteItem, editItem } from '../redux/actions';
+import '../style/Table.css';
 
 class Table extends Component {
   constructor() {
@@ -33,7 +34,7 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <table>
+      <table className="table table-dark table-striped table-content">
         <thead>
           <tr>
             <th>Descrição</th>
@@ -67,6 +68,7 @@ class Table extends Component {
                   <td>
                     <div>
                       <button
+                        className="btn btn-outline-light"
                         type="button"
                         data-testid="edit-btn"
                         onClick={ () => this.handleEdit(id) }
@@ -74,6 +76,7 @@ class Table extends Component {
                         Editar
                       </button>
                       <button
+                        className="btn btn-outline-light"
                         type="button"
                         data-testid="delete-btn"
                         onClick={ () => this.handleClick(id) }
