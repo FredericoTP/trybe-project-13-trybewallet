@@ -1,5 +1,3 @@
-# :construction: README em construção ! :construction:
-
 # :computer: Trybe-13-Project-TrybeWallet :computer:
 
 Nesse projeto foi desenvolvida uma carteira de controle de gastos com conversor de moedas utilizando React e Redux. A pessoa usuária pode:
@@ -7,7 +5,7 @@ Nesse projeto foi desenvolvida uma carteira de controle de gastos com conversor 
  - Visualizar uma tabelas com seus gastos;
  - Visualizar o total de gastos convertidos para uma moeda;
 
-# Acesse o projeto clicando [aqui]()! :green_heart:
+# Acesse o projeto clicando [aqui](https://fredericotp.github.io/trybe-project-13-trybewallet/)! :green_heart:
 
 <br />
 
@@ -362,6 +360,13 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas e que tr
 
 ## 100% :heavy_check_mark:
 
+![Project-TrybeWallet-Grade](https://github.com/FredericoTP/trybe-project-13-trybewallet/blob/main/images/trybewallet-grade.png?raw=true)
+ 
 <br />
 
 ## 3- Preview
+
+![Project-TrybeWallet-Preview1](https://github.com/FredericoTP/trybe-project-13-trybewallet/blob/main/images/trybewallet-preview1.png?raw=true)
+ 
+![Project-TrybeWallet-Preview2](https://github.com/FredericoTP/trybe-project-13-trybewallet/blob/main/images/trybewallet-preview2.png?raw=true)
+ 
