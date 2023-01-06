@@ -2,7 +2,7 @@
 
 Nesse projeto foi desenvolvida uma carteira de controle de gastos com conversor de moedas utilizando React e Redux. A pessoa usuária pode:
  - Adicionar, remover e editar um gasto;
- - Visualizar uma tabelas com seus gastos;
+ - Visualizar uma tabela com seus gastos;
  - Visualizar o total de gastos convertidos para uma moeda;
 
 # Acesse o projeto clicando [aqui](https://fredericotp.github.io/trybe-project-13-trybewallet/)! :green_heart:
