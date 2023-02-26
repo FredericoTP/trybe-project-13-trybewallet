@@ -29,10 +29,6 @@ Nesse projeto foi desenvolvida uma carteira de controle de gastos com conversor 
   
 </summary>
  
-### Página de Login
-
-Crie uma página para que a pessoa usuária se identifique, com email e senha. Esta página deve ser a página inicial de seu aplicativo.
-
 ### 1. Crie uma página inicial de login
 
 ### 2. Crie um header para a página de carteira
